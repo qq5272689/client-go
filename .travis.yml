@@ -3,6 +3,10 @@ language: go
 go_import_path: k8s.io/client-go
 
 go:
-  - 1.10.2
+  - 1.12.1
 
-script: go build ./...
+install:
+  - echo "Skip godeps"
+
+script:
+  - GO111MODULE=on go build ./...
